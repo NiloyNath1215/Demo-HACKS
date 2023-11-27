@@ -1,0 +1,14 @@
+import webbrowser
+import pywhatkit
+l=[]
+f=open('"C:\Users\INATHARVA\Downloads\scrap (1).txt"','r')
+a=f.read()
+b=a.splitlines()
+d=input("Enter mobile number: ")
+c=input("enter the string: ")
+
+for i in range(0,len(b)):
+    if c in b[i]:
+        l.append(b[i])
+p=str(l)
+pywhatkit.sendwhatmsg_instantly(d,p)
